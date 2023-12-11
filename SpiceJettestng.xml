@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="url" value="https://www.spicejet.com/"></parameter>
+<listeners>
+<listener class-name ="utility.ListenerSJ"></listener>
+</listeners>
+  <parameter name="browser" value="chrome"></parameter>
+  <test  thread-count="5" name="Test">
+   <classes>
+   <class name="testcase.TC_001_SJ_Invalid_Signup"/>
+   <class name="testcase.TC_001_SJ_Valid_Signup"/>
+   <class name="testcase.TC_002_SJ_Login"/>
+   <class name="testcase.TC_003_SJ_OneWay"/>
+   <class name="testcase.TC_004_SJ_RoundTrip"/>
+   <class name="testcase.TC_005_SJ_FieldsAvailable"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
